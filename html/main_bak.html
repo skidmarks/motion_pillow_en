@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion Pillow :: Sample</title>
+
+    <meta property="og:title" content="모션필로우(motionpillow)">
+	<meta property="og:description" content="모션필로우가 움직이면 코골이는 멀어지고 사랑만 남아요">
+	<meta property="og:image" content="http://tdes.tenminds.com/mp_ces/images/ces/motionpillow.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" /> 
+    <link rel="stylesheet" href="../css/mp_ces.css">
+
+    <script src="../js/swiper-bundle.min.js"></script>    
+    <script src="../js/noframework.waypoints.js"></script>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>  
+</head>
+<body>
+
+    <div class="mp_ces_wrap">
+        <div class="inner">
+
+            <div class="top_utils show">
+                <a href="#" class="logo_s"><img src="../images/logo_s.png" alt="motion pillow - motion system & motion pillow"></a>
+                <div class="side_m">
+                    <span class="lang">
+                        <em class="chosed">EN</em>
+                        <i></i>
+                        <em>KR</em>
+                    </span>
+                    <!-- <a href="#" class="menu"><img src="../images/menu.png" alt="메뉴 열기"></a> -->
+                    <div class="icon nav-icon-5 menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div> 
+                </div>
+            </div>
+            
+            <!-- SECTION INTRO -->
+            <section class="intro">
+                <div class="intro_inner">
+                    <div class="player_box">
+                        <div id="player"></div>
+                        <div class="player_cover"></div>
+                    </div>
+                    <div class="text_layer">
+                        <div class="text_area">
+                            <h2>
+                                Are you still <br>
+                                sleeping <br>
+                                in a noisy <br>
+                                concert hall? 
+                            </h2>
+                            <p><a href="https://www.youtube.com/watch?v=fEiJn4LlgAs" target="_blank">Full video</a></p>
+                        </div>
+                    </div>
+                </div><!--/intro-->
+                <div class="logo_layer"><img src="../images/logo.png" alt=""></div>
+            </section> 
+
+            <script src="https://www.youtube.com/player_api"></script>
+            <script>
+                var player;
+                function onYouTubeIframeAPIReady() {
+                    player = new YT.Player('player', {
+                        width: '350%',
+                        height: '350%',
+                        // videoId: 'TIxVNaROPe0',
+                        videoId: 'fEiJn4LlgAs',
+                        playerVars: {
+                            'autoplay': 1,
+                            'playsinline': 1,
+                            'controls': 0,
+                            'frameborder': 0,
+                            'modestbranding': 1
+                        },
+                        events: {
+                            'onReady': onPlayerReady
+                        }
+                    });
+                }
+        
+                function onPlayerReady(e) {
+                    e.target.mute();
+                    e.target.playVideo();
+                    e.target.setPlaybackQuality('hd1080');
+                    setInterval(function() {
+                        player.seekTo(0);
+                    }, 15000);
+                }
+
+                var playerCover = document.querySelector('.player_cover');
+                playerCover.addEventListener('click', function() {
+                    if(player.isMuted()) {
+                        player.unMute();
+                        this.classList.add('on');
+                    } else {
+                        player.mute();
+                        this.classList.remove('on');
+                    }                          
+                });
+
+                // intro start
+                window.addEventListener('DOMContentLoaded', (event) => {
+                    const introLayer = document.querySelector('.intro');
+                    introLayer.classList.add('active');
+                });
+            </script>                
+
+            <section id="story" style="height:100vh;background-color:red;" class="real_cont_01">
+                <h2>Section 1</h2>
+            </section>
+            <section id="motion_system" style="height:100vh;background-color:violet;" class="real_cont_01">
+                <h2>Section 2</h2>
+            </section>
+            <section id="how_works" style="height:100vh;background-color:lawngreen;" class="real_cont_01">
+                <h2>Section 3</h2>
+            </section>
+            <section id="achievements" style="height:100vh;background-color:coral;" class="real_cont_01">
+                <h2>Section 4</h2>
+            </section>
+            <section id="contact_us" style="height:100vh;background-color:blueviolet;" class="real_cont_01">
+                <h2>Section 5</h2>
+            </section>
+        </div><!--inner-->
+    </div><!--mp_ces_wrap-->
+
+    <div class="menu_cont">
+        <nav>
+            <ul>
+                <li><a href="#story">Story</a></li>
+                <li><a href="#motion_system">Motion system & <br>Motion Pilow</a></li>
+                <li><a href="#how_works">How it works</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact_us">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <script>
+
+
+        </script>
+
+        <div class="sns">
+            <a href="#"><img src="../images/ico_fb.png" alt="go to facebook"></a>
+            <a href="#"><img src="../images/ico_insta.png" alt="go to instagram"></a>
+            <a href="#"><img src="../images/ico_tw.png" alt="go to tweeter"></a>
+            <a href="#"><img src="../images/ico_yt.png" alt="go to youtube"></a>
+        </div>
+
+        <p>Copyright@10minds All right reserved.</p>
+<!-- 
+        <a href="#" class="btn_close"><img src="../images/close_m.png" alt="close the menu"></a> -->
+    </div>
+
+    <script>
+
+        // topUtility menu show/hide is trigged by scrolling at the picked position
+        // const realContent = document.querySelector('.real_cont_01');
+        const topUtil = document.querySelector('.top_utils');
+        // var waypoint = new Waypoint({
+        //     element: realContent,
+        //     handler: function(direction) {
+        //         if (direction === 'down') {
+        //             topUtil.classList.add("show");
+        //         } else {
+        //             topUtil.classList.remove("show");
+        //         }
+        //     }
+        // });
+
+        // document.onscrollend = event => {
+        //     console.log('scroll End');
+        // }
+            
+        // document.onscroll = event => {
+        //     topUtil.classList.remove("show");
+        //     console.log('TESTER');
+        // }
+
+        // document.onscroll = event => {
+        //     clearTimeout(window.scrollEndTimer)
+        //     window.scrollEndTimer = setTimeout(function() {
+        //         topUtil.classList.add("show");
+        //     }, 100)
+        // }
+
+
+        var prevScrollpos = window.pageYOffset;
+            window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                topUtil.classList.add("show");
+            } else {
+                topUtil.classList.remove("show");
+            }
+            prevScrollpos = currentScrollPos;
+        }
+
+        const icons = document.querySelectorAll('.icon');
+        const links = document.querySelector('.menu_cont');
+        icons.forEach (icon => {  
+            icon.addEventListener('click', (event) => {
+                icon.classList.toggle("open");
+                if(icon.classList.contains('open')) {
+                    links.classList.add('show');
+                }else{
+                    links.classList.remove('show');
+                }
+            });
+        });      
+
+
+        // menu show/hide
+        // const btnToggleMenu = document.querySelector('.menu');
+        // const menuCnt = document.querySelector('.menu_cont');
+
+        // btnToggleMenu.addEventListener('click', function(e) {
+        //     icon.classList.toggle("open");
+        //     if(icon.classList.contains('open')) {
+        //         menuCnt.classList.add('show');
+        //     }else{
+        //         menuCnt.classList.remove('show');
+        //     }       
+        // });
+  
+    </script>
+</body>
+</html>
