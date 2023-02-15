@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 clearClassName('cur', selectorList);
                 this.classList.add('cur');
                 
-                imgAlt = this.querySelector('.selector_txt strong').textContent;
+                imgAlt = this.querySelector('.selector_txt span').textContent;
                 imgName = this.querySelector('.selector_txt span').textContent;
                 imgSrc = selectPanel.getAttribute('src');
 
