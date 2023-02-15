@@ -10,9 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // top menu
     const topUtil = document.querySelector('.top_utils');
 
+
+
     // down scroll topUtil hide
     var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
+    window.onscroll = function() {
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
             topUtil.classList.add("show");
@@ -21,6 +23,44 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         prevScrollpos = currentScrollPos;
     }
+
+
+    function waypoint_topmenu() {
+        
+        const waypoint = new Waypoint({
+            element: document.getElementById('story'),
+            handler: function(direction) {
+                var prevScrollpos = window.pageYOffset;
+                if(direction == "down") {
+                    window.addEventListener('scroll', function() {
+                        var currentScrollPos = window.pageYOffset;
+                        if (prevScrollpos > currentScrollPos) {
+                            topUtil.classList.add("show");
+                        } else {
+                            topUtil.classList.remove("show");
+                        }
+                        prevScrollpos = currentScrollPos;            
+                    });                    
+                }else {
+                    window.removeEventListener('scroll', function() {
+                        console.log('scroll event removed');
+                    });
+                }           
+            }
+        });
+
+    }waypoint_topmenu();
+
+    // const waypoint = new Waypoint({
+    //     element: document.getElementById('story'),
+    //     handler: function(direction) {
+    //         if(direction == "down") {
+    //             console.log('TESTER DOWN');
+    //         }else {
+    //             console.log('TESTER UP');
+    //         }           
+    //     }
+    // });
 
     // hamburger menu 
     const menu = document.querySelector('.icon');
