@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // apps slides
     const appsSlide = new Swiper('.apps_slide', {
-        slidesPerView: 1.3,
+        slidesPerView: 1.5,
         centeredSlides: true,
         spaceBetween: 30,
         loop: true,
