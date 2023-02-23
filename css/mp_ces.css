@@ -57,6 +57,7 @@ body img{vertical-align:top;}
 .top_utils .side_m{display:flex;justify-content:space-between;align-items:center;width:37.614678%;}
 .top_utils .lang{width:57.621951%;display:flex;justify-content:space-between;align-items:center;}
 .top_utils .lang em{font-size:4vw;color:rgba(255,255,255,0.3);line-height:1.4em;font-weight:700;}
+.top_utils .lang a{font-size:4vw;color:rgba(255,255,255,0.3);line-height:1.4em;font-weight:700;text-decoration:none;}
 .top_utils .lang i{width:20%;height:2px;background-color:rgba(255,255,255,0.3);}
 .top_utils .lang em.chosed{color:#fff;}
 /* .top_utils .menu{width:18.292682%} */
@@ -235,6 +236,8 @@ section .inner{padding:0 7%;background:transparent;}
 #key_feature{background-color:#fff;}
 
 #app_info{background-color:rgba(255, 179, 0, 1);}
+#app_info p.snore_record{position:relative;}
+#app_info p.snore_record img.s_cord{position:absolute;top:26%;left:50%;width:86%;transform:translateX(-50%)}
 .apps_slide_wrap{background-color:rgba(255, 179, 0, 1);}
 .apps_slide{width:100%;overflow:hidden;position:relative;}
 
@@ -303,7 +306,7 @@ section .inner{padding:0 7%;background:transparent;}
 .contact_info .contact_sns a{display:inline-block;width:16.09375%;}
 
 #achievements{background-color:rgba(255, 250, 239, 1);}
-#achievements .inner{background-color:rgba(255, 250, 239, 1);}
+#achievements .inner{background-color:rgba(255, 250, 239, 1);padding-bottom:10%;}
 #achievements .inner p:nth-of-type(1){margin-bottom:5vw}
 .voice_slide{width:100%;overflow:hidden;position:relative;padding-bottom:8vw;}
 .review_slide{width:100%;overflow:hidden;position:relative;padding-bottom:8vw;}
@@ -330,6 +333,7 @@ footer div{text-align:center;font-size:11px;line-height:1.4em;}
   .top_utils .side_m{width:25%;}
   .top_utils .lang{width:60%;}
   .top_utils .lang em{font-size:30px;}
+  .top_utils .lang a{font-size:30px;}
 
   .swiper-pagination .swiper-pagination-bullet{width:30px;height:30px;}
 }
